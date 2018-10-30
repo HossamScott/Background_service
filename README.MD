@@ -2,7 +2,7 @@
 
 Android library for calling service in background or foreground service.
 
-With this library, you can call any method with specific timer and get Broadcast call-back when timer expire.
+With this library, you can call any method with specific timer and get a broadcast call-back when that timer expires.
 
 
 # How to integrate the library in your app?
@@ -27,20 +27,20 @@ dependencies {
 </dependency>
 ```
 
-# How it works?
+# How it works
 
-in your MainActivity call the service and give it the time you want in **Seconds**
-> Example : You need to set service.call(...); to 1800 if i want to call the service in 30 minutes.
+In your MainActivity call the service and give it the time you want in **Seconds**.
+> Example : You need to set service.call(...); to 1800 if you want to call the service in 30 minutes.
 
 ```
 RunService service = new RunService(this);
 service.call(1800);
 ```
 
-Now to call your method after 30 minues you have to register **BroadcastReceiver**
-using the following code:
+Now, to call your method after 30 minues, 
+You have to register broadcastreciever by making following changes.
 
-Inside your OnCreate()
+Inside your OnCreate() add following line:
 ```
 IntentFilter intentFilter = new IntentFilter("alaram_received");
 registerReceiver(alarm_receiver, intentFilter);
@@ -57,10 +57,11 @@ Place your code inside onReceive
         }
     };
 ```
-If you wish to re-call the receiver call the service inside onReceive to start the service again
+If you want to recall the receiver, call the service inside of the method onRecieve which will start the service again.
 
 
-Dont forget 
+
+Dont forget: 
 ```
     @Override
     protected void onDestroy() {
