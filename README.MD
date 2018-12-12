@@ -12,7 +12,7 @@ With this library, you can call any method with specific timer and get a broadca
 ```
 
 dependencies {
-        implementation 'com.hossam.backgroundService:backgroundService:0.1.0'
+        implementation 'com.hossam.backgroundService:backgroundService:latest-version'
 }
 ```
 ### or use 
@@ -22,7 +22,7 @@ dependencies {
 <dependency>
   <groupId>com.hossam.backgroundService</groupId>
   <artifactId>backgroundService</artifactId>
-  <version>0.1.0</version>
+  <version>latest-version</version>
   <type>pom</type>
 </dependency>
 ```
@@ -115,6 +115,13 @@ defaultConfig {
         targetSdkVersion 28
     }
 ```
+
+# Version Updates
+Background_service **"2.1.1"**
+ - API 23 - Marhsmwallow (6.0) Fix.
+ - Added New ways to start the service Such as (Auto Repeat + Call Within range), Check example project to find the code.
+
+
 # License
 Apache License v2.0.
 
